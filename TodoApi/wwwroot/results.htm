@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="winner" style="font-size: 60px"></div>
+    <p style="font-weight: bold">Previous winners:</p>
+    <div id="results"></div>
+    <p><a href="index.html">Play Again</a></p>
+
+    <script>
+        const uri = 'api/todoitems';
+        let todos;
+
+        function getItems() {
+            fetch(uri)
+                .then(response => response.json())
+                .then(data => {
+                    for (let i of data) {
+                        console.log(i);
+
+                        let result = document.createElement("p");
+
+                        let date_ms = new Date(parseInt(i.date) * 1000);
+
+                        result.innerText =
+
+                            i.winner + " at " +
+                            date_ms.getDate() + "/" +
+                            date_ms.getMonth() + "/" +
+                            date_ms.getFullYear() + " " +
+                            date_ms.getHours() + ":" +
+                            date_ms.getMinutes();
+
+                        document.querySelector("#results").appendChild(result);
+                    }
+                })
+                .catch(error => console.error('Unable to get items.', error));
+        }
+
+        window.addEventListener("load", () => {
+            document.querySelector("#winner").innerText = window.location.search.slice(-1) + " wins the game!";
+
+            getItems();
+
+            console.log(todos);
+        });
+    </script>
+</body>
+</html>

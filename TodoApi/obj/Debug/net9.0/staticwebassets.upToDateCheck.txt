@@ -1,0 +1,8 @@
+wwwroot\game.js
+wwwroot\index.html
+wwwroot\style.css
+wwwroot\results.htm
+C:\Users\work.experience\source\repos\TodoApi\TodoApi\wwwroot\game.js
+C:\Users\work.experience\source\repos\TodoApi\TodoApi\wwwroot\index.html
+C:\Users\work.experience\source\repos\TodoApi\TodoApi\wwwroot\style.css
+C:\Users\work.experience\source\repos\TodoApi\TodoApi\wwwroot\results.htm

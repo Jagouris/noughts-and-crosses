@@ -1,0 +1,26 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    outline: #aaa solid 1px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 40px;
+    vertical-align: top;
+}
+
+#board {
+    margin: 5px;
+    outline: #000 solid 5px;
+    text-align: center;
+    width: 240px;
+}
